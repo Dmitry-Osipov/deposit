@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: deposit
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: amount-deposit-event
+      isolation-level: read_committed
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: org.microservice.*
+
+server:
+  port: 0
